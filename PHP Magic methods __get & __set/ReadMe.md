@@ -1,13 +1,9 @@
 **Task 3 B -** Write a PHP code to demonstrate the usecase of __get() & __set() PHP Magic methods
 **Analysis**
 
-1. As Magento products folow the EAV structure that -
-2. We need to write a Query between **eav_attribute** and **catalog_product_entity_int** table
-3. Magento save product status on table catalog_product_entity_int table. Save it as 1 and 2.
-4. 1 for enable
-   2 for disable.
-5. We need to get the **status** attribute id using **attribute_code_status**, basically it is **96**.
-
+1. __get() allows access to properties that haven't been explicitly defined in the class. It retrieves values stored in the $userData array.
+2. __set() allows setting properties dynamically. When properties like name, age, and email are set, they are stored in the $userData array.
+This way, the User class can handle user data without explicitly defining properties for each attribute. The magic methods __get() and __set() enable the class to dynamically handle properties, allowing the addition and retrieval of user-specific data.
 **Solution**
 
 
