@@ -26,7 +26,8 @@ function parseNginxLogLine($logLine) {
 $logLines = file($logFilePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 $parsedLogs = [];
-foreach ($logLines as $logLine) {
+foreach ($logLines as $logLine1) {
+    $logLine = str_replace('"','',$logLine1);
     $parsedLog = parseNginxLogLine($logLine);
     if ($parsedLog !== null) {
         $parsedLogs[] = $parsedLog;
